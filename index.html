@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        *{
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(4, 67, 29);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.navbar{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ background-color: #333;
+ color: white;
+ position: fixed;
+ overflow: hidden;
+ width: 100%;
+}
+
+.logo{
+    font-size: 1.5rem;
+    margin: 0.5rem;
+}
+
+.navbar-links ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li{
+    /* line-height: 80px; */
+    /* margin: 0 5px; */
+}
+
+.navbar-links li a{
+    color: white;
+    font-size: 17px;
+    padding: 1rem;
+    border-radius: 3px;
+    display: block;
+}
+
+.navbar-links li:hover{
+    background-color: #555;
+}
+
+.toggle-button{
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width:500px){
+    .toggle-button{
+        display: flex;
+    }
+
+    .navbar-links{
+        /* display: none; */
+        width: 100%;
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links li{
+        text-align: center;
+    }
+
+    .navbar-links li a{
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active{
+        display: flex;
+    }
+}
+
+ /* Section-main */
+ .main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    /* margin: auto; */
+ }
+.main p{
+    display: inline-block;
+    font-size: 2.5rem;
+    width: 40%;
+    margin: 17px;
+    /* margin: auto; */
+    padding: 40px;
+    align-items: center;
+}
+
+.main img{
+    display: flex;
+    /* flex-wrap: wrap; */
+    float: right;
+    margin: 17px;
+    padding: 10px;
+    /* justify-content: space-around;
+    align-items: center; */
+    width: auto;
+}
+
+/* section-ABOUT */
+.about,.contact,.projects{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 55px;
+}
+.about img{
+    display: flex;
+    /* justify-content: space-around; */
+    margin: 17px;
+    padding: 10px;
+    width: auto;
+    float: left;
+}
+
+.about .tabs{
+    display: inline;
+    width: 55%;
+    float:right;
+}
+
+.about .tabs ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.about .tabs ul li a{
+    color: darkorchid;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 2rem;
+    font-family: cursive;
+}
+
+.about .tabs ul li a:hover{
+    background-color: rgb(231, 192, 250);
+    border-radius: 10px;
+}
+
+.about ul.skill_des {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+@keyframes cursor{
+    50%{border-color: transparent;}
+}
+
+@keyframes typing{
+    from{width: 0};
+}
+
+.about ul.edu_des{
+    display: flex;
+    flex-direction: column;
+    /* display: none; */
+    /* visibility: hidden; */
+}
+.about ul.skill_des li
+{
+    /* border-right: 3px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+    typing 10s ,
+    cursor .4s step-end infinite alternate; */
+    list-style: disc;
+    /* visibility: hidden;
+    animation-name: animate;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    transition: all ease 3s; */
+}
+
+.about ul.edu_des li{
+    list-style: disc;
+    /* visibility: hidden;
+    animation-name: animate1;
+    animation-duration: 5s;
+    animation-delay: 5s;
+    animation-iteration-count: infinite; */
+}
+
+
+/* @keyframes animate{
+    from{
+        visibility: hidden;
+    }
+    to{
+        visibility: visible;
+        display: none;
+        transition-timing-function:linear;
+    }
+}
+@keyframes animate1{
+    from{
+        visibility: hidden;
+    }
+    to{
+        visibility: visible;
+        transition-timing-function:cubic-bezier(0.35,-0.45, 1, 1);
+    }
+} */
+
+section.projects{
+    /* display: flex; */
+    float: left;
+    margin: 25px;
+}
+
+.projects h2{
+    font-size: 2.5rem;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.projects ol{
+    display: flex;
+    flex-direction: column;
+    /* float: left; */
+    width: 55%;
+}
+
+.projects ol li{
+    list-style-type: style;
+    font-size: 2.0rem;
+}
+
+.projects ol li a{
+    font-size: 1.5rem;
+    font-family: cursive;
+    font-weight: bolder;
+}
+
+.projects img{
+    display: flex;
+    float: right;
+    margin: 17px;
+    padding: 10px;
+    width: auto;
+}
+
+h2{
+    font-size: 3.0rem;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.contact{
+    display: flex;
+    justify-content: center;
+}
+
+.contact .row1 a img,.contact .row2 a img{
+    width: auto;
+    margin: 25px;
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <label for="" class="logo">Smaran Satapathy</label>
+        <a href="" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+       <div class="navbar-links">
+        <ul>
+            <li><a href="#home" class="active">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+       </div>
+        
+    </nav>
+
+    <section class="main" id="home">
+        <p>Amigo Folks, this is <br><strong>Smaran Satapathy</strong> <br>and I am passionate in <br>
+            Web Development
+        </p>
+
+        <img src="https://sm.mashable.com/mashable_in/photo/default/49772115-3800-40ec-8275-16059fc401e5_h7qa.jpg" alt="" >
+    </section>
+
+    <section class="about" id="about">
+        <img src="https://staticg.sportskeeda.com/editor/2022/03/8e60b-16466754955033-1920.jpg?w=440" alt="">
+
+        <div class="tabs">
+            <ul>
+                <li class="skills"><a href="">Skills</a></li>
+                <li class="edu"><a href="">Education</a></li>
+            </ul>
+            <ul class="skill_des">
+                <li>Web Developement</li>
+                <li>JAVA along with Data Structures & Algorithms</li>
+                <li>C</li>
+                <li>Javascript, React JS</li>
+            </ul>
+
+            <ul class="edu_des">
+                <li>Completed 10th from Little Flower School</li>
+                <li>Completed 12th from Guidance English Medium School</li>
+                <li>Currently pursuing <strong>B. Tech </strong> in <strong>Institute of Technical Research and Education, Bhubaneshwar, Odisha</strong></li>
+            </ul>
+        </div>
+    </section>
+
+            <!-- <h1>Projects Accomplised By Me</h1> -->
+    <section class="projects" id="projects">
+        <h2>List of Projects Accomplised By Me</h2>
+        <ol>
+            <li><a href="">Temperature Converter</a></li>
+            <li><a href="">Portfolio</a></li>
+            <li><a href="">Netflix Home Page</a></li>
+            <li><a href="">Stranger Things Website</a></li>
+            <li><a href="">Disney+ Hotstar Demo</a></li>
+        </ol>
+        <img src="https://w0.peakpx.com/wallpaper/469/148/HD-wallpaper-fullstack-development-nodejs-programmer-technology.jpg" alt="" height="500px">
+    </section>
+
+    <h2>Contact Me</h2>
+    <section class="contact" id="contact">
+        <div class="logos">
+            <span class="row1">
+                <a href="https://github.com/Smaran-Satapathy"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="" width="80px" height="80px"></a>
+                <a href="https://www.linkedin.com/in/smaran-satapathy-388270257/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="" width="70px" height="70px"></a>
+            </span>
+            <span class="row2">
+                <a href="https://www.instagram.com/smaransatapathy/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" alt="" width="70px" height="70px"></a>
+                <a href="mailto:smaransatapathy31@gmail.com"><img src="https://www.logo.wine/a/logo/Gmail/Gmail-Logo.wine.svg" alt="" width="70px" height="70px"></a>
+            </span>
+        </div>
+    </section>
+</body>
+</html>
